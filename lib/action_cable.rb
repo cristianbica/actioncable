@@ -27,6 +27,9 @@ module ActionCable
   autoload :RemoteConnections, 'action_cable/remote_connections'
   autoload :Broadcaster, 'action_cable/broadcaster'
 
+  autoload :AbstractAdapter, 'action_cable/abstract_adapter'
+  autoload :RedisAdapter, 'action_cable/redis_adapter'
+
   # Singleton instance of the server
   module_function def server
     @server ||= ActionCable::Server::Base.new
